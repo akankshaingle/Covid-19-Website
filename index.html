@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid-19 Website</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+
+body{
+    min-width:100%;
+    max-width:900px;
+    margin:15px 0;
+    text-align:center;
+}
+
+h1{
+    text-transform :uppercase;
+    letter-spacing:2px;
+}
+h2{
+    color:darkblue;
+}
+h3{
+    margin:10px 0;
+}
+#date{
+    color:teal;
+}
+form input,
+form button{
+    width:200px;
+    height:45px;
+    border:1px solid #ccc;
+    padding:2px 5px;
+    outline:none;
+    cursor:pointer;
+}
+form button{
+    width:100px;
+}
+.btn{
+    padding:1rem 1rem;
+    border-radius:1rem;
+}
+
+#name-country{
+    color:#555;
+    margin-top:20px;
+}
+<!--.worldlive .box-container{-->
+<!--    display:flex;-->
+<!--    align-items:center;-->
+<!--    justify-content:center;-->
+<!--    flex-wrap:wrap;-->
+
+<!--}-->
+<!--.worldlive .box-container .box{-->
+<!--    background:#fff;-->
+<!--    border: .1rem solid rgba(0,0,0,.1);-->
+<!--    margin:2rem;-->
+<!--    margin-top:3rem;-->
+<!--    padding:2rem 3.5rem;-->
+<!--    text-align:center;-->
+<!--    position:relative;-->
+<!--}-->
+.content{
+    margin:10px 0;
+    display:flex;
+    flex-wrap:wrap;
+    text-align:center;
+    justify-content:space-around;
+    cursor:pointer;
+}
+.content .box{
+     background:#fff;
+     border:.1rem solid rgba(0,0,0,.1);
+     padding:5rem;
+     margin:2rem;
+     width:30rem;
+     border-radius:.5rem;
+     box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+     text-align:center;
+}
+.content .box:hover{
+   transform:translateY(-1rem);
+}
+.content .box p{
+    text-transform:uppercase;
+    opacity:0.7;
+    text-align:center;
+    font-size:1.5rem;
+    padding:.5rem;
+}
+.content .box h3{
+    text-transform:uppercase;
+    text-align:center;
+    font-size:1.8rem;
+    padding:.5rem;
+}
+.content .box i{
+    text-transform:uppercase;
+    
+    font-size:1.8rem;
+    padding:.5rem;
+}
+
+.confirmed h3,
+.confirmed i{
+    color:crimson;
+}
+
+.recovered h3,
+.recovered i{
+    color:green;
+}
+<!--::-webkit-scrollbar{-->
+<!--    display:none;-->
+<!--}-->
+
+
+</style>
+<body>
+<!--Header Section-->
+<header>
+    <a href="#" class="logo">c<span class="fas fa-virus"></span>vid-19</a>
+    <div id="menu" class="fas fa-bars"></div>
+    <nav class="navbar">
+        <ul>
+            <li><a class="active" href="#home">home</a></li>
+            <li><a href="#protect">protect</a></li>
+            <li><a href="#symptoms">Symptoms</a></li>
+            <li><a href="#prevent">prevent</a></li>
+            <li><a href="#handwash">handwash</a></li>
+            <li><a href="#spread">spread</a></li>
+            <li><a href="#worldlive">worldLiveCase</a></li>
+        </ul>
+    
+    </nav>
+</header>
+<!--Home Section-->
+<section class="home" id="home">
+    <div class="content">
+    
+<!--        <h3>Covid-19</h3>-->
+        <h3>Covid-19 <br>stay safe, stay home</h3>
+        <p>Coronavirus disease (COVID-19) is an infectious disease caused by a newly discovered coronavirus.
+            The COVID-19 virus spreads primarily through droplets of saliva or discharge from the nose when
+            an infected person coughs or sneezes.</p>
+        <a href="#protect" class="btn">protect now</a>
+    </div>
+    <div class="image">
+        <img src="images/home-img.png" alt="Home-image">
+    </div>
+</section>
+<!--protect starts-->
+<section class="protect" id="protect">
+    <h1 class="heading">take steps to <span>protect </span> yourself</h1>
+    <div class="box-container">
+        <div class="box">
+            <img src="images/protect-1.png" alt="">
+            <h3>Wear A Face Mask</h3>
+            <p>Masks should completely cover the nose and mouth and fit snugly against the sides of face without gaps.When
+                you wear a mask, you protect others as well as yourself.</p>
+            <a href="https://www.google.com/aclk?sa=l&ai=DChcSEwjRrKvMgMzwAhUt3EwCHQf4A00YABAAGgJ0bQ&ae=2&sig=AOD64_1nNeUgwDTuHkhViUwckfDTjNx0rA&q&adurl&ved=2ahUKEwjfjaPMgMzwAhUNOisKHRWEAp0Q0Qx6BAgCEAE" class="btn">learn more</a>
+        </div>
+          <div class="box">
+            <img src="images/protect-2.png" alt="">
+            <h3>Wash Your Hands</h3>
+            <p>Wash your hands with soap and water for at least 20 seconds or use hand sanitizer with at least 60% alcohol
+                after touching or removing your mask.</p>
+            <a href="https://www.healthline.com/health/7-steps-of-handwashing" class="btn">learn more</a>
+        </div>
+          <div class="box">
+            <img src="images/protect-3.png" alt="">
+            <h3>Avoid Close Contact</h3>
+            <p>Social distancing, also called “physical distancing,” means keeping a safe space between yourself and
+                other people who are not from your household.</p>
+            <a href="https://www.cdc.gov/coronavirus/2019-ncov/prevent-getting-sick/social-distancing.html" class="btn">learn more</a>
+        </div>
+    </div>
+</section>
+<!--symptoms starts-->
+<section class="symptoms" id="symptoms">
+    <div class="content">
+        <h1 class="heading">What Are Main <span>Symptoms?</span></h1>
+        <p>People with COVID-19 have had a wide range of symptoms reported – ranging from mild symptoms to severe illness. Symptoms may appear 2-14 days after exposure to the virus. Anyone can have mild to severe symptoms. People with these symptoms may have COVID-19:</p>
+        <ul>
+            <div class="one">
+                <li>Fever</li>
+                <li>Tiredness</li>
+                <li>Dry Cough</li>
+            </div>
+             <div class="two">
+                <li>Sore Throat</li>
+                <li>Aches and Pains</li>
+                <li>Shortness of Breath</li>
+            </div>
+        </ul>
+<!--        <a href="#" class="btn" >Know more</a>-->
+    </div>
+    <div class="image">
+        <img src="images/symptoms-img.png" alt="" >
+    </div>
+</section>
+<!--prevent starts-->
+<section class="prevent" id="prevent">
+    <div class="row">
+        <div class="image">
+            <img src="images/dont-img.png" alt="">
+        </div>
+        <div class="content">
+            <h1 class="heading">things <span>not to do</span> during covid</h1>
+            <p>jgiuergbnekrj uerigbrjkvursbfvbgiurgbjv dnbvvbhrgbuie rgrhr ryertyhuji rtyuio dfghjk cvbnm ertyuio ertyui
+            dfghjk sdfghjk xcvghjk rtyui rtyuio rtyhujk</p>
+            <ul>
+                <li>Do Not Share Eating</li>
+                <li>Do Not Touch Your Face or Nose</li>
+                <li>Do Not Contact Sick People</li>
+            </ul>
+        </div>
+    </div>
+     <div class="row">
+        <div class="content">
+            <h1 class="heading">things <span> to do</span> during covid</h1>
+            <p>jgiuergbnekrj uerigbrjkvursbfvbgiurgbjv dnbvvbhrgbuie rgrhr ryertyhuji rtyuio dfghjk cvbnm ertyuio ertyui
+            dfghjk sdfghjk xcvghjk rtyui rtyuio rtyhujk</p>
+            <ul>
+                <li>Wash Your Hands For 20 sec</li>
+                <li>Wear a Mask</li>
+                <li>Seek Medical Care Regularly</li>
+            </ul>
+        </div>
+         <div class="image">
+            <img src="images/do-img.png" alt="">
+        </div>
+    </div>
+</section>
+<!--handwash starts-->
+<section class="handwash" id="handwash">
+    <h1 class="heading">how to <span>wash your hand</span> properly</h1>
+    <div class="box-container">
+        <div class="box">
+            <span>1</span>
+            <img src="images/hadnwash-1.png" alt="">
+            <h3>Apply Soap on Hand</h3>
+        </div>
+         <div class="box">
+            <span>2</span>
+            <img src="images/hadnwash-2.png" alt="">
+            <h3>Palm to Palm</h3>
+        </div>
+         <div class="box">
+            <span>3</span>
+            <img src="images/hadnwash-3.png" alt="">
+            <h3>Between Fingers</h3>
+        </div>
+         <div class="box">
+            <span>4</span>
+            <img src="images/hadnwash-4.png" alt="">
+            <h3>Back of The Hands</h3>
+        </div>
+         <div class="box">
+            <span>5</span>
+            <img src="images/hadnwash-5.png" alt="">
+            <h3>Clean With Water</h3>
+        </div>
+         <div class="box">
+            <span>6</span>
+            <img src="images/hadnwash-6.png" alt="">
+            <h3>Use Towel to Dry</h3>
+        </div>
+    </div>
+</section>
+<section class="spread" id="spread">
+    <h1 class="heading">how Covid-19 <span>spreads</span> over the world</h1>
+    
+    <p>COVID-19 is caused by the SARS-CoV-2 virus, which spreads between people, mainly when an infected person is in close contact with another person.
+
+The virus can spread from an infected person’s mouth or nose in small liquid particles when they cough, sneeze, speak, sing or breathe heavily. These liquid particles are different sizes, ranging from larger ‘respiratory droplets’ to smaller ‘aerosols’.
+
+Other people can catch COVID-19 when the virus gets into their mouth, nose or eyes, which is more likely to happen when people are in direct or close contact (less than 1 metre apart) with an infected person. <br>The virus can also spread after infected people sneeze, cough on, or touch surfaces, or objects, such as tables, doorknobs and handrails. Other people may become infected by touching these contaminated surfaces, then touching their eyes, noses or mouths without having cleaned their hands first.</p>
+    
+    <div class="image" ></div></div>
+</section>
+<!--world live starts-->
+<section class="worldlive" id="worldlive">
+    <div class="container">
+<!--        <span>Covid-19 Cases</span>-->
+        <h1 class="heading">Corona Case Update</h1>
+        <h3 class="heading" id="date">Date Time</h3>
+        <form autocomplete="off">
+            <input type="text" name="srch" id="srch" required
+               list="countries" placeholder="Search by Country">
+            <datalist id="countries">
+                <option value="World">World</option>
+            </datalist>
+            <button class="btn">Search</button>
+        </form>
+        <h2 class="heading" id="name-country">The World</h2>
+        <div class="content">
+            
+            <div class="box confirmed">
+                <p>CONFIRMED</p>
+                <h3>0</h3>
+                <i class="fa fa-long-arrow-alt-up">0</i>
+            </div>
+            <div class="box deaths">
+                <p>DEATHS</p>
+                <h3>0</h3>
+                <i class="fa fa-long-arrow-alt-up">0</i>
+            </div>
+            <div class="box recovered">
+                <p>RECOVERED</p>
+                <h3>0</h3>
+                <i class="fa fa-long-arrow-alt-up">0</i>
+            </div>
+        </div>
+        <div class="chart"></div>
+    </div>
+    
+    
+</section>
+<section class="footer">
+    <div class="box-container">
+<!--        <div class="box">-->
+<!--            <h3>about us</h3>-->
+<!--            <p>bseufwieeeeeeevbyrefv 2hgokerjvbkrj enhbfwekfb wbkeuigo2u biurguhfq9pbv</p>-->
+<!--        </div>-->
+        <div class="box">
+            <h3>locations</h3>
+            <a href="#">India</a>
+            <a href="#">USA</a>
+            <a href="#">Russia</a>
+            <a href="#">Japan</a>
+            <a href="#">France</a>
+            <a href="#">Africa</a>
+        </div>
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#home">home</a>
+            <a href="#protect">protect</a>
+            <a href="#symptoms">symptoms</a>
+            <a href="#prevent">prevent</a>
+            <a href="#handwash">handwash</a>
+            <a href="#spread">spread</a>
+        </div>
+          <div class="box">
+            <h3>contact info</h3>
+              <p><i class="fas fa-phone"></i> +91 9876543289</p>
+              <p><i class="fas fa-envelope"></i> akankshaingle1@gmail.com</p>
+              <p><i class="fas fa-map-marker-alt"></i> Indore, India 452001</p>
+              <div class="share">
+                    <a href="#" class="fab fa-youtube"></a>
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+              </div>
+        </div>
+    </div>
+    <h1 class="credit">created  by <a href="#">Akanksha Ingle</a> all right reserved.</h1>
+</section>
+<!--scroll top starts-->
+<a href="#home" class="scroll-top" >
+    <img src="images/scroll-img.png" alt="">
+</a>
+<!--scroll top ends-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="script.js"></script>
+<script>
+
+const countries = document.querySelector('datalist');
+const search = document.querySelector('#srch');
+const date = document.querySelector('#date');
+const nameCountry = document.querySelector('#name-country');
+const confirmed = document.querySelector('.confirmed');
+const deaths = document.querySelector('.deaths');
+const recovered = document.querySelector('.recovered');
+const chart = document.querySelector('.chart');
+
+let dataChart =[];
+
+const API_URL = "https://api.covid19api.com/summary";
+
+async function covid(country){
+    countries.innerHTML=`<option value="World">World</option>`;
+    resetValue(confirmed);
+    resetValue(deaths);
+    resetValue(recovered);
+
+    const res=await fetch(API_URL);
+    console.log(res)
+    const data = await res.json();
+    console.log(country)
+
+    if(res.status === 4 || res.status === 200 ){
+        date.textContent = new Date(data.Date).toDateString();
+
+        if(country == '' || country == 'world'){
+             const {TotalConfirmed, TotalDeaths,TotalRecovered, NewConfirmed,NewDeaths,NewRecovered}=data.Global;
+             total(TotalConfirmed,TotalDeaths,TotalRecovered);
+             newUpdate(NewConfirmed,NewDeaths,NewRecovered);
+
+             nameCountry.textContent='The World';
+             dataChart = [TotalConfirmed,TotalDeaths,TotalRecovered];
+        };
+
+        data.Countries.forEach(item =>{
+            const option = document.createElement('option');
+            option.value=item.Country;
+            option.textContent=item.Country;
+            countries.appendChild(option);
+
+            if(country === item.Country){
+                total(item.TotalConfirmed,item.TotalDeaths,item.TotalRecovered);
+                newUpdate(item.NewConfirmed,item.NewDeaths,item.NewRecovered);
+
+                nameCountry.textContent = item.Country;
+                dataChart = [item.TotalConfirmed,item.TotalDeaths,item.TotalRecovered];
+            }
+
+        });
+
+        drawChart(dataChart);
+
+    }else{
+        chart.innerHTML ='<h2>Loading...</h2>';
+    }
+}
+
+const speed = 100;
+function counting(target, element)
+{
+    const inc = target / speed;
+    const count = +element.textContent;
+    if(count < target){
+        element.textContent = Math.ceil(count + inc);
+        setTimeout(()=>{
+            counting(target, element)
+        },1)
+    }
+    else{
+        element.textContent = target;
+    }
+};
+
+function total(Confirmed,Deaths,Recovered){
+//    const inc = Confirmed / speed;
+//    const count = +confirmed.children[1].textContent;
+//    if(count < Confirmed){
+//            confirmed.children[1].textContent = Math.ceil(count + inc);
+//            setTimeout(()=>{
+//                counting(Confirmed,Deaths,Recovered)
+//            },1)
+//        }
+//        else{
+//            //Total Confirmed
+//            confirmed.children[1].textContent =Confirmed;
+//        }
+        counting(Confirmed,confirmed.children[1]);
+        //Total Deaths
+        counting(Deaths,deaths.children[1]);
+        //Total Recovered
+        counting(Recovered,recovered.children[1]);
+
+};
+
+function newUpdate(Confirmed,Deaths,Recovered){
+    //New Confirmed
+    counting(Confirmed,confirmed.children[2]);
+     //New Deaths
+    counting(Deaths,deaths.children[2]);
+    //New Recovered
+    counting(Recovered,recovered.children[2]);
+};
+
+function resetValue(element){
+    element.children[1].textContent = 0;
+    element.children[2].textContent = 0;
+};
+
+function drawChart(data){
+    chart.innerHTML = '';
+    const ctx = document.createElement('canvas');
+    chart.appendChild(ctx);
+    var myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Total Confirmed', 'Total Deaths', 'Total Recovered'],
+        datasets: [{
+            label: nameCountry.textContent,
+            data: data,
+            backgroundColor: [
+                'crimson',
+                'black',
+                'green',
+
+            ],
+
+        }]
+    },
+    options: {}
+});
+}
+
+covid(search.value);
+
+const btnSearch = document.querySelector('button');
+btnSearch.addEventListener('click', (e)=>{
+    e.preventDefault();
+    covid(search.value);
+    search.value = '';
+});
+</script>
+</body>
+</html>
